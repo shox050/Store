@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Game</string>
+		<key>description</key>
+		<string>GTA V</string>
+		<key>cost</key>
+		<integer>100</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>NoteBook</string>
+		<key>description</key>
+		<string>MacBook PRO</string>
+		<key>cost</key>
+		<integer>2399</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Phone</string>
+		<key>description</key>
+		<string>iphone Xs Max</string>
+		<key>cost</key>
+		<integer>999</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Book</string>
+		<key>description</key>
+		<string>iOS Development Course</string>
+		<key>cost</key>
+		<integer>689</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Car</string>
+		<key>description</key>
+		<string>BMW x5m</string>
+		<key>cost</key>
+		<integer>8000000</integer>
+	</dict>
+</array>
+</plist>
