@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		E7F5B2E0230C549500EE5F62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2DF230C549500EE5F62 /* AppDelegate.swift */; };
-		E7F5B2E2230C549500EE5F62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2E1230C549500EE5F62 /* ViewController.swift */; };
 		E7F5B2E5230C549500EE5F62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F5B2E3230C549500EE5F62 /* Main.storyboard */; };
 		E7F5B2E8230C549500EE5F62 /* Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2E6230C549500EE5F62 /* Store.xcdatamodeld */; };
 		E7F5B2ED230C549600EE5F62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F5B2EB230C549600EE5F62 /* LaunchScreen.storyboard */; };
 		E7F5B2FA230C5CDD00EE5F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F5B2F9230C5CDC00EE5F62 /* Assets.xcassets */; };
+		E7F5B2FC230C639900EE5F62 /* StoreTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2FB230C639900EE5F62 /* StoreTabBarController.swift */; };
+		E7F5B2FE230C641200EE5F62 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2FD230C641200EE5F62 /* ListViewController.swift */; };
+		E7F5B300230C644500EE5F62 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2FF230C644500EE5F62 /* AddViewController.swift */; };
+		E7F5B302230C652200EE5F62 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B301230C652200EE5F62 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E7F5B2DC230C549500EE5F62 /* Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Store.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F5B2DF230C549500EE5F62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E7F5B2E1230C549500EE5F62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E7F5B2E4230C549500EE5F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7F5B2E7230C549500EE5F62 /* Store.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Store.xcdatamodel; sourceTree = "<group>"; };
 		E7F5B2EC230C549600EE5F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7F5B2EE230C549600EE5F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7F5B2F9230C5CDC00EE5F62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7F5B2FB230C639900EE5F62 /* StoreTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTabBarController.swift; sourceTree = "<group>"; };
+		E7F5B2FD230C641200EE5F62 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		E7F5B2FF230C644500EE5F62 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		E7F5B301230C652200EE5F62 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +75,10 @@
 		E7F5B2F4230C593E00EE5F62 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E7F5B2E1230C549500EE5F62 /* ViewController.swift */,
+				E7F5B2FB230C639900EE5F62 /* StoreTabBarController.swift */,
+				E7F5B2FD230C641200EE5F62 /* ListViewController.swift */,
+				E7F5B2FF230C644500EE5F62 /* AddViewController.swift */,
+				E7F5B301230C652200EE5F62 /* DetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -162,9 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F5B300230C644500EE5F62 /* AddViewController.swift in Sources */,
 				E7F5B2E8230C549500EE5F62 /* Store.xcdatamodeld in Sources */,
-				E7F5B2E2230C549500EE5F62 /* ViewController.swift in Sources */,
 				E7F5B2E0230C549500EE5F62 /* AppDelegate.swift in Sources */,
+				E7F5B302230C652200EE5F62 /* DetailViewController.swift in Sources */,
+				E7F5B2FE230C641200EE5F62 /* ListViewController.swift in Sources */,
+				E7F5B2FC230C639900EE5F62 /* StoreTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
