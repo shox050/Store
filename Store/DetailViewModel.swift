@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class DetailViewModel {
+    
+    var item: Item!
+    
+}

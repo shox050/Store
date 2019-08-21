@@ -13,11 +13,19 @@ class ListViewController: UIViewController {
     
     let listViewModel = ListViewModel()
     
+    var selectedItem: Item?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         listViewModel.getItems()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVc = segue.destination as? DetailViewController, let item = selectedItem {
+            destinationVc.detailViewModel.item = item
+        }
     }
 }
 
@@ -46,6 +54,8 @@ extension ListViewController: UITableViewDataSource {
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        selectedItem = listViewModel.items[indexPath.row]
         
         performSegue(withIdentifier: "showDetailViewController", sender: self)
     }

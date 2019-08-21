@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class AddViewModel {
+    
+    var Item: Item?
+    
+    
+}

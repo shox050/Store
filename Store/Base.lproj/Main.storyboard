@@ -43,6 +43,9 @@
                                 <rect key="frame" x="264" y="541" width="130" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add new item"/>
+                                <connections>
+                                    <action selector="actionAdd:" destination="01j-D9-J0V" eventType="touchUpInside" id="2y2-kR-V64"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vam-4o-GkI">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -58,6 +61,11 @@
                     <tabBarItem key="tabBarItem" title="Add" image="plus" selectedImage="plus" id="c1Y-hV-vta">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tfCost" destination="PSc-Gg-EAC" id="rxS-fV-4vj"/>
+                        <outlet property="tfDescription" destination="S9x-FQ-eQJ" id="YyT-8d-LPK"/>
+                        <outlet property="tfName" destination="WJj-77-APt" id="L8S-Nk-UkN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYg-0O-lpe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,6 +181,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gs9-Gf-mnZ"/>
                     </view>
+                    <connections>
+                        <outlet property="lCost" destination="xg8-pi-gSv" id="7F6-a6-VzT"/>
+                        <outlet property="lDescription" destination="fJS-Gk-kJs" id="NVb-Qb-YHU"/>
+                        <outlet property="lName" destination="Tik-t8-Pe0" id="T6A-Yq-puV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kc-Mj-Ews" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
