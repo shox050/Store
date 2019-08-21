@@ -21,6 +21,7 @@
 		E7F5B309230C702900EE5F62 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B308230C702900EE5F62 /* AddViewModel.swift */; };
 		E7F5B30B230C703C00EE5F62 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B30A230C703C00EE5F62 /* DetailViewModel.swift */; };
 		E7F5B311230C789F00EE5F62 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B310230C789F00EE5F62 /* Item.swift */; };
+		E7F5B314230D9FA300EE5F62 /* ItemConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B313230D9FA300EE5F62 /* ItemConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E7F5B308230C702900EE5F62 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 		E7F5B30A230C703C00EE5F62 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		E7F5B310230C789F00EE5F62 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E7F5B313230D9FA300EE5F62 /* ItemConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +74,7 @@
 		E7F5B2DE230C549500EE5F62 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				E7F5B30F230C786D00EE5F62 /* CodableModels */,
+				E7F5B30F230C786D00EE5F62 /* Models */,
 				E7F5B2F5230C595200EE5F62 /* Application */,
 				E7F5B2F4230C593E00EE5F62 /* Controllers */,
 				E7F5B303230C6CAB00EE5F62 /* ViewModels */,
@@ -123,12 +125,13 @@
 			name = ViewModels;
 			sourceTree = "<group>";
 		};
-		E7F5B30F230C786D00EE5F62 /* CodableModels */ = {
+		E7F5B30F230C786D00EE5F62 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				E7F5B310230C789F00EE5F62 /* Item.swift */,
+				E7F5B313230D9FA300EE5F62 /* ItemConfiguration.swift */,
 			);
-			name = CodableModels;
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +212,7 @@
 				E7F5B309230C702900EE5F62 /* AddViewModel.swift in Sources */,
 				E7F5B307230C701800EE5F62 /* ListViewModel.swift in Sources */,
 				E7F5B30B230C703C00EE5F62 /* DetailViewModel.swift in Sources */,
+				E7F5B314230D9FA300EE5F62 /* ItemConfiguration.swift in Sources */,
 				E7F5B2E0230C549500EE5F62 /* AppDelegate.swift in Sources */,
 				E7F5B302230C652200EE5F62 /* DetailViewController.swift in Sources */,
 				E7F5B2FE230C641200EE5F62 /* ListViewController.swift in Sources */,

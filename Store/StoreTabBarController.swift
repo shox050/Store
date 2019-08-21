@@ -8,6 +8,8 @@
 
 import UIKit
 
+protocol StoreController: class { }
+
 class StoreTabBarController: UITabBarController {
 
     override func viewDidLoad() {
@@ -27,4 +29,9 @@ class StoreTabBarController: UITabBarController {
     }
     */
 
+}
+
+
+extension StoreTabBarController: StoreController {
+    
 }

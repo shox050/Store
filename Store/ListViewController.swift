@@ -11,9 +11,9 @@ import UIKit
 
 class ListViewController: UIViewController {
     
-    let listViewModel = ListViewModel()
+    private let listViewModel = ListViewModel()
     
-    var selectedItem: Item?
+    private var selectedItem: Item?
     
     
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class ListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVc = segue.destination as? DetailViewController, let item = selectedItem {
-            destinationVc.detailViewModel.item = item
+            destinationVc.detailConfiguration = DetailConfiguration(item: item)
         }
     }
 }

@@ -8,23 +8,38 @@
 
 import UIKit
 
+protocol DetailController {
+    func configure(with configuration: DetailConfiguration)
+}
+
 class DetailViewController: UIViewController {
     
-    let detailViewModel = DetailViewModel()
+    private var detailViewModel: DetailViewModel!
+    
+    var detailConfiguration: DetailConfiguration!
     
     @IBOutlet private weak var lName: UILabel!
-    
     @IBOutlet private weak var lDescription: UILabel!
-    
     @IBOutlet private weak var lCost: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lName.text = detailViewModel.item.name
+        configure(with: detailConfiguration)
 
-        lDescription.text = detailViewModel.item.description
+    }
+}
 
-        lCost.text = String(detailViewModel.item.cost)
+extension DetailViewController: DetailController {
+    func configure(with configuration: DetailConfiguration) {
+        
+        detailViewModel = DetailViewModel(configuration.item)
+        
+        lName.text = detailViewModel.name
+        
+        lDescription.text = detailViewModel.description
+        
+        lCost.text = String(detailViewModel.cost)
     }
 }

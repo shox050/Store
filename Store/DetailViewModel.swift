@@ -10,6 +10,22 @@ import Foundation
 
 class DetailViewModel {
     
-    var item: Item!
+    private var item: Item
+    
+    var name: String {
+        return item.name
+    }
+    
+    var description: String {
+        return item.description
+    }
+    
+    var cost: Int {
+        return item.cost
+    }
+    
+    init(_ item: Item) {
+        self.item = item
+    }
     
 }
