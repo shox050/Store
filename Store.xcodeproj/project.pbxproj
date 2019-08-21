@@ -74,11 +74,11 @@
 		E7F5B2DE230C549500EE5F62 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				E7F5B30F230C786D00EE5F62 /* Models */,
 				E7F5B2F5230C595200EE5F62 /* Application */,
+				E7F5B2F6230C596900EE5F62 /* Storyboards */,
 				E7F5B2F4230C593E00EE5F62 /* Controllers */,
 				E7F5B303230C6CAB00EE5F62 /* ViewModels */,
-				E7F5B2F6230C596900EE5F62 /* Storyboards */,
+				E7F5B30F230C786D00EE5F62 /* Models */,
 				E7F5B2EE230C549600EE5F62 /* Info.plist */,
 				E7F5B304230C6DB700EE5F62 /* Items.plist */,
 				E7F5B2E6230C549500EE5F62 /* Store.xcdatamodeld */,
