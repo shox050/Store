@@ -10,6 +10,8 @@ import UIKit
 
 class DetailViewModel {
     
+    let constants = Constants()
+    
     private var item: Item
     
     var name: String {
@@ -28,7 +30,7 @@ class DetailViewModel {
         self.item = item
     }
     
-    func renderPdf(_ completion: @escaping () -> Void) {
+    func renderPdf(_ completion: @escaping (Data) -> Void) {
         
         let pageRect = CGRect(x: 0, y: 0, width: 595, height: 841)
 
@@ -54,16 +56,28 @@ class DetailViewModel {
             formattedTitle.draw(in: pageRect.insetBy(dx: 50, dy: 50))
         }
         
-        let url = URL(fileURLWithPath: "/Users/vladimir/Documents/")
-        let fileUrl = url.appendingPathComponent("myFile.pdf")
-        print(fileUrl)
+        completion(data)
         
-        do {
-            try data.write(to: fileUrl)
-            completion()
-        } catch let error {
-            print("Error save data: ", error.localizedDescription)
-        }
+//        let url = URL(fileURLWithPath: "/Users/vladimir/Documents/")
+//        let fileUrl = url.appendingPathComponent("myFile.pdf")
+        
+//        let path = Bundle.main.bundlePath
+        
+//        guard let fileUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+//            print("No path in render PDF")
+//            return
+//        }
+//
+////        let fileUrl = URL(fileURLWithPath: path).appendingPathComponent(constants.pdfFileName)
+//
+//        print(fileUrl)
+//
+//        do {
+//            try data.write(to: fileUrl)
+//            completion()
+//        } catch let error {
+//            print("Error save data: ", error.localizedDescription)
+//        }
     }
     
 

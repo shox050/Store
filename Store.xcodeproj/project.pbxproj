@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7375695231068020010EB0D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7375694231068020010EB0D /* Constants.swift */; };
 		E7F5B2E0230C549500EE5F62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2DF230C549500EE5F62 /* AppDelegate.swift */; };
 		E7F5B2E5230C549500EE5F62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F5B2E3230C549500EE5F62 /* Main.storyboard */; };
 		E7F5B2E8230C549500EE5F62 /* Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2E6230C549500EE5F62 /* Store.xcdatamodeld */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7375694231068020010EB0D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E7F5B2DC230C549500EE5F62 /* Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Store.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F5B2DF230C549500EE5F62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7F5B2E4230C549500EE5F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7375693231067EE0010EB0D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E7375694231068020010EB0D /* Constants.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
 		E7F5B2D3230C549500EE5F62 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		E7F5B2DE230C549500EE5F62 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				E7375693231067EE0010EB0D /* Source */,
 				E7F5B330230DCDD700EE5F62 /* Serializers */,
 				E7F5B2F5230C595200EE5F62 /* Application */,
 				E7F5B2F6230C596900EE5F62 /* Storyboards */,
@@ -257,6 +268,7 @@
 				E7F5B2E8230C549500EE5F62 /* Store.xcdatamodeld in Sources */,
 				E7F5B309230C702900EE5F62 /* AddViewModel.swift in Sources */,
 				E7F5B307230C701800EE5F62 /* ListViewModel.swift in Sources */,
+				E7375695231068020010EB0D /* Constants.swift in Sources */,
 				E7F5B32D230DCD4C00EE5F62 /* ItemEntity.swift in Sources */,
 				E7F5B336230DD0E800EE5F62 /* ItemSerializer.swift in Sources */,
 				E7F5B30B230C703C00EE5F62 /* DetailViewModel.swift in Sources */,

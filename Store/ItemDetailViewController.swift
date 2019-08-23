@@ -15,6 +15,8 @@ protocol ItemDetailController {
 
 class DetailViewController: UIViewController {
     
+    let constants = Constants()
+    
     private var detailViewModel: DetailViewModel!
     
     @IBOutlet private weak var lName: UILabel!
@@ -22,8 +24,8 @@ class DetailViewController: UIViewController {
     @IBOutlet private weak var lCost: UILabel!
     
     @IBAction private func createPdf(_ sender: UIBarButtonItem) {
-        detailViewModel.renderPdf { [weak self] in
-            self? .sendMail()
+        detailViewModel.renderPdf { [weak self] attachment in
+            self? .sendMail(with: attachment)
         }
     }
     
@@ -51,29 +53,15 @@ extension DetailViewController: MFMailComposeViewControllerDelegate {
 }
 
 extension DetailViewController {
-    func sendMail() {
+    func sendMail(with attachment: Data) {
         guard MFMailComposeViewController.canSendMail() else { return }
         
         let mail = MFMailComposeViewController()
         mail.mailComposeDelegate = self
         mail.setMessageBody("Hello world!", isHTML: false)
         
-        let url = URL(string: "file:///Users/vladimir/Documents/myFile.pdf")!
-        var data: Data?
         
-        do {
-            let data2 = try Data(contentsOf: url)
-            print("Data2 ", data2)
-            data = data2
-        } catch let error {
-            print("Error contentsOf url ", error.localizedDescription)
-        }
-        
-        if let data = data {
-            mail.addAttachmentData(data, mimeType: "application/pdf", fileName: "myFile.pdf")
-            present(mail, animated: true)
-        } else {
-            print("Data nil")
-        }
+        mail.addAttachmentData(attachment, mimeType: "application/pdf", fileName: "myFile.pdf")
+        present(mail, animated: true)
     }
 }
