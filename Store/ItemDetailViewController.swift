@@ -20,6 +20,9 @@ class DetailViewController: UIViewController {
     @IBOutlet private weak var lDescription: UILabel!
     @IBOutlet private weak var lCost: UILabel!
     
+    @IBAction private func createPdf(_ sender: UIBarButtonItem) {
+        detailViewModel.renderPdf()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
