@@ -22,17 +22,10 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            self?.listViewModel.getItems { [weak self] in
-                
-                DispatchQueue.main.sync {
-                    self?.tvList.reloadData()
-                }
-            }
+        listViewModel.getItems { [weak self] in
+            
+            self?.tvList.reloadData()
         }
-        
-
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

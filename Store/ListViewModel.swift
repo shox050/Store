@@ -22,9 +22,11 @@ class ListViewModel {
     
     func getItems(_ completion: @escaping () -> Void) {
         
+        executionQueue.async(group: itemsGroup) {
             self.getItemsFromPlist()
             self.getItemsFromCoreData()
-        
+        }
+                
         itemsGroup.notify(queue: DispatchQueue.main) {
             completion()
         }
