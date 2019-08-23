@@ -66,3 +66,15 @@ extension ListViewController: UITableViewDelegate {
         performSegue(withIdentifier: "showDetailViewController", sender: self)
     }
 }
+
+extension ListViewController: AddItemDelegate {
+    func didAdd(new item: Item) {
+        listViewModel.items.append(item)
+        
+        let indexPath = IndexPath(row: listViewModel.items.count, section: 0)
+        
+        DispatchQueue.main.sync {
+            tvList.reloadRows(at: [indexPath], with: .automatic)
+        }
+    }
+}

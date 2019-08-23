@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol AddItemDelegate: class {
+    func didAdd(new item: Item)
+}
+
 class AddViewController: UIViewController {
+    
+    weak var delegate: AddItemDelegate?
     
     private let addViewModel = AddViewModel()
     
@@ -61,7 +67,10 @@ extension AddViewController {
         
         let item = Item(name: name, description: description, cost: cost)
         
+        addViewModel.item = item
         addViewModel.saveItem(item)
+        delegate?.didAdd(new: addViewModel.item)
+        
     }
     
     private func showAlert(title: String, message: String) {

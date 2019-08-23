@@ -11,6 +11,8 @@ import CoreData
 
 class AddViewModel {
     
+    var item: Item!
+    
     private let serializer: ItemSerialization & ItemDeserialization = ItemSerializer()
     
     func saveItem(_ item: Item) {
