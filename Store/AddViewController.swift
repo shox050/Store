@@ -10,7 +10,7 @@ import UIKit
 
 class AddViewController: UIViewController {
     
-    var addViewModel = AddViewModel()
+    private let addViewModel = AddViewModel()
     
     @IBOutlet private weak var tfName: UITextField!
     @IBOutlet private weak var tfDescription: UITextField!
@@ -26,8 +26,10 @@ class AddViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
     }
 }
+
 
 extension AddViewController {
     
@@ -58,6 +60,8 @@ extension AddViewController {
         }
         
         let item = Item(name: name, description: description, cost: cost)
+        
+        addViewModel.saveItem(item)
     }
     
     private func showAlert(title: String, message: String) {
@@ -65,6 +69,7 @@ extension AddViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
+    
     
     
 }
