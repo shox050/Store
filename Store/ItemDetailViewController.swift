@@ -8,15 +8,13 @@
 
 import UIKit
 
-protocol DetailController {
+protocol ItemDetailController {
     func configure(with configuration: DetailConfiguration)
 }
 
 class DetailViewController: UIViewController {
     
     private var detailViewModel: DetailViewModel!
-    
-    var detailConfiguration: DetailConfiguration!
     
     @IBOutlet private weak var lName: UILabel!
     @IBOutlet private weak var lDescription: UILabel!
@@ -26,20 +24,15 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configure(with: detailConfiguration)
-
+        lName.text = detailViewModel.name
+        lDescription.text = detailViewModel.description
+        lCost.text = String(detailViewModel.cost)
     }
 }
 
-extension DetailViewController: DetailController {
+extension DetailViewController: ItemDetailController {
     func configure(with configuration: DetailConfiguration) {
         
         detailViewModel = DetailViewModel(configuration.item)
-        
-        lName.text = detailViewModel.name
-        
-        lDescription.text = detailViewModel.description
-        
-        lCost.text = String(detailViewModel.cost)
     }
 }

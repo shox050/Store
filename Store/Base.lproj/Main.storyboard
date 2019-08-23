@@ -113,6 +113,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="List" id="0Y1-4y-w9N"/>
                     <connections>
+                        <outlet property="tvList" destination="4yq-RK-Xi9" id="8oo-fD-6F9"/>
                         <segue destination="5ah-ng-v1P" kind="show" identifier="showDetailViewController" id="ssl-xQ-sHf"/>
                     </connections>
                 </viewController>

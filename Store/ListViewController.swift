@@ -11,6 +11,9 @@ import UIKit
 
 class ListViewController: UIViewController {
     
+    @IBOutlet private weak var tvList: UITableView!
+    
+    
     private let listViewModel = ListViewModel()
     
     private var selectedItem: Item?
@@ -19,12 +22,15 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        listViewModel.getItems()
+        listViewModel.getItems { [weak self] in
+            
+            self?.tvList.reloadData()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVc = segue.destination as? DetailViewController, let item = selectedItem {
-            destinationVc.detailConfiguration = DetailConfiguration(item: item)
+            destinationVc.configure(with: DetailConfiguration(item: item))
         }
     }
 }
