@@ -71,6 +71,7 @@ extension AddViewController {
         addViewModel.saveItem(item)
         delegate?.didAdd(new: addViewModel.item)
         
+        navigationController?.popToRootViewController(animated: true)
     }
     
     private func showAlert(title: String, message: String) {
