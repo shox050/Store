@@ -80,6 +80,5 @@ extension ListViewController: AddItemDelegate {
         tvList.beginUpdates()
         tvList.insertRows(at: [indexPath], with: .automatic)
         tvList.endUpdates()
-        
     }
 }

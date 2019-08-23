@@ -68,7 +68,7 @@ extension AddViewController {
         let item = Item(name: name, description: description, cost: cost)
         
         addViewModel.item = item
-//        addViewModel.saveItem(item)
+        addViewModel.saveItem(item)
         delegate?.didAdd(new: addViewModel.item)
         
         navigationController?.popToRootViewController(animated: true)
