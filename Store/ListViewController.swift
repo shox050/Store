@@ -32,6 +32,10 @@ class ListViewController: UIViewController {
         if let destinationVc = segue.destination as? DetailViewController, let item = selectedItem {
             destinationVc.configure(with: DetailConfiguration(item: item))
         }
+        
+        if let destinationVc = segue.destination as? AddViewController {
+            destinationVc.delegate = self
+        }
     }
 }
 
@@ -71,10 +75,11 @@ extension ListViewController: AddItemDelegate {
     func didAdd(new item: Item) {
         listViewModel.items.append(item)
         
-        let indexPath = IndexPath(row: listViewModel.items.count, section: 0)
+        let indexPath = IndexPath(row: listViewModel.items.count - 1, section: 0)
         
-        DispatchQueue.main.sync {
-            tvList.reloadRows(at: [indexPath], with: .automatic)
-        }
+        tvList.beginUpdates()
+        tvList.insertRows(at: [indexPath], with: .automatic)
+        tvList.endUpdates()
+        
     }
 }
