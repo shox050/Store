@@ -14,9 +14,7 @@ protocol ItemDetailController {
 }
 
 class DetailViewController: UIViewController {
-    
-    let constants = Constants()
-    
+        
     private var detailViewModel: DetailViewModel!
     
     @IBOutlet private weak var lName: UILabel!

@@ -9,9 +9,7 @@
 import UIKit
 
 class DetailViewModel {
-    
-    let constants = Constants()
-    
+        
     private var item: Item
     
     var name: String {
