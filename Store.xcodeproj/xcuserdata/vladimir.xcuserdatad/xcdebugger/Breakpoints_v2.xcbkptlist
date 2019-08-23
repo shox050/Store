@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Store/DetailViewModel.swift"
-            timestampString = "588267255.184365"
+            timestampString = "588270835.6363209"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "renderPdf()"
+            landmarkName = "renderPdf(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

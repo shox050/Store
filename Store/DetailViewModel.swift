@@ -28,7 +28,7 @@ class DetailViewModel {
         self.item = item
     }
     
-    func renderPdf() {
+    func renderPdf(_ completion: @escaping () -> Void) {
         
         let pageRect = CGRect(x: 0, y: 0, width: 595, height: 841)
 
@@ -60,8 +60,11 @@ class DetailViewModel {
         
         do {
             try data.write(to: fileUrl)
+            completion()
         } catch let error {
             print("Error save data: ", error.localizedDescription)
         }
     }
+    
+
 }
