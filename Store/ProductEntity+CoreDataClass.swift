@@ -2,7 +2,7 @@
 //  ProductEntity+CoreDataClass.swift
 //  Store
 //
-//  Created by Vladimir on 21/08/2019.
+//  Created by Vladimir on 24/08/2019.
 //  Copyright © 2019 VladimirYakutin. All rights reserved.
 //
 //
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(ItemEntity)
+@objc(ProductEntity)
 public class ProductEntity: NSManagedObject {
 
 }

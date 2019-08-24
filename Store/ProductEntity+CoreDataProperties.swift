@@ -1,8 +1,8 @@
 //
-//  ItemEntity+CoreDataProperties.swift
+//  ProductEntity+CoreDataProperties.swift
 //  Store
 //
-//  Created by Vladimir on 21/08/2019.
+//  Created by Vladimir on 24/08/2019.
 //  Copyright © 2019 VladimirYakutin. All rights reserved.
 //
 //
@@ -17,8 +17,8 @@ extension ProductEntity {
         return NSFetchRequest<ProductEntity>(entityName: "ProductEntity")
     }
 
-    @NSManaged public var name: String
-    @NSManaged public var productDescription: String
     @NSManaged public var cost: Int64
+    @NSManaged public var productDescription: String?
+    @NSManaged public var name: String?
 
 }

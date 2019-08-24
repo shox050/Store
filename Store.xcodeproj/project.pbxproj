@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E71C742E231154390064610D /* ProductEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C742C231154390064610D /* ProductEntity+CoreDataClass.swift */; };
+		E71C742F231154390064610D /* ProductEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C742D231154390064610D /* ProductEntity+CoreDataProperties.swift */; };
 		E7F5B2E0230C549500EE5F62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2DF230C549500EE5F62 /* AppDelegate.swift */; };
 		E7F5B2E5230C549500EE5F62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F5B2E3230C549500EE5F62 /* Main.storyboard */; };
 		E7F5B2E8230C549500EE5F62 /* Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2E6230C549500EE5F62 /* Store.xcdatamodeld */; };
@@ -22,13 +24,13 @@
 		E7F5B311230C789F00EE5F62 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B310230C789F00EE5F62 /* Product.swift */; };
 		E7F5B314230D9FA300EE5F62 /* ProductDetailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B313230D9FA300EE5F62 /* ProductDetailConfiguration.swift */; };
 		E7F5B326230DC9F600EE5F62 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B325230DC9F600EE5F62 /* CoreDataStore.swift */; };
-		E7F5B32D230DCD4C00EE5F62 /* ProductEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B32B230DCD4C00EE5F62 /* ProductEntity.swift */; };
-		E7F5B32E230DCD4C00EE5F62 /* ProductEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B32C230DCD4C00EE5F62 /* ProductEntity+CoreDataProperties.swift */; };
 		E7F5B334230DD04700EE5F62 /* ProductSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B333230DD04700EE5F62 /* ProductSerialization.swift */; };
 		E7F5B336230DD0E800EE5F62 /* ProductSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B335230DD0E800EE5F62 /* ProductSerializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E71C742C231154390064610D /* ProductEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E71C742D231154390064610D /* ProductEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E7F5B2DC230C549500EE5F62 /* Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Store.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F5B2DF230C549500EE5F62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7F5B2E4230C549500EE5F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,8 +48,6 @@
 		E7F5B310230C789F00EE5F62 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		E7F5B313230D9FA300EE5F62 /* ProductDetailConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailConfiguration.swift; sourceTree = "<group>"; };
 		E7F5B325230DC9F600EE5F62 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
-		E7F5B32B230DCD4C00EE5F62 /* ProductEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEntity.swift; sourceTree = "<group>"; };
-		E7F5B32C230DCD4C00EE5F62 /* ProductEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E7F5B333230DD04700EE5F62 /* ProductSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSerialization.swift; sourceTree = "<group>"; };
 		E7F5B335230DD0E800EE5F62 /* ProductSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSerializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,8 +146,8 @@
 		E7F5B32F230DCD8300EE5F62 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				E7F5B32B230DCD4C00EE5F62 /* ProductEntity.swift */,
-				E7F5B32C230DCD4C00EE5F62 /* ProductEntity+CoreDataProperties.swift */,
+				E71C742C231154390064610D /* ProductEntity+CoreDataClass.swift */,
+				E71C742D231154390064610D /* ProductEntity+CoreDataProperties.swift */,
 				E7F5B325230DC9F600EE5F62 /* CoreDataStore.swift */,
 			);
 			name = CoreData;
@@ -251,13 +251,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7F5B326230DC9F600EE5F62 /* CoreDataStore.swift in Sources */,
-				E7F5B32E230DCD4C00EE5F62 /* ProductEntity+CoreDataProperties.swift in Sources */,
 				E7F5B311230C789F00EE5F62 /* Product.swift in Sources */,
+				E71C742F231154390064610D /* ProductEntity+CoreDataProperties.swift in Sources */,
 				E7F5B300230C644500EE5F62 /* AddProductViewController.swift in Sources */,
 				E7F5B2E8230C549500EE5F62 /* Store.xcdatamodeld in Sources */,
 				E7F5B309230C702900EE5F62 /* AddProductViewModel.swift in Sources */,
 				E7F5B307230C701800EE5F62 /* ProductListViewModel.swift in Sources */,
-				E7F5B32D230DCD4C00EE5F62 /* ProductEntity.swift in Sources */,
+				E71C742E231154390064610D /* ProductEntity+CoreDataClass.swift in Sources */,
 				E7F5B336230DD0E800EE5F62 /* ProductSerializer.swift in Sources */,
 				E7F5B30B230C703C00EE5F62 /* DetailViewModel.swift in Sources */,
 				E7F5B314230D9FA300EE5F62 /* ProductDetailConfiguration.swift in Sources */,
