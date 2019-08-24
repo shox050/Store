@@ -8,38 +8,35 @@
 
 import UIKit
 
-protocol AddItemDelegate: class {
-    func didAdd(new item: Item)
+protocol AddProductDelegate: class {
+    func didAdd(new product: Product)
 }
 
-class AddViewController: UIViewController {
+class AddProductViewController: UIViewController {
     
-    weak var delegate: AddItemDelegate?
-    
-    private let addViewModel = AddViewModel()
+    weak var delegate: AddProductDelegate?
+    private let addProductViewModel = AddProductViewModel()
     
     @IBOutlet private weak var tfName: UITextField!
     @IBOutlet private weak var tfDescription: UITextField!
     @IBOutlet private weak var tfCost: UITextField!
     
-    
     @IBAction private func actionAdd(_ sender: UIButton) {
-        
-        addItem()
+        addProduct()
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        tfName.becomeFirstResponder()
     }
 }
 
 
-extension AddViewController {
+extension AddProductViewController {
     
-    private func addItem() {
+    private func addProduct() {
         guard let name = tfName.text, !name.isEmpty else {
             showAlert(title: "Alert", message: "Please, enter name")
             tfName.becomeFirstResponder()
@@ -65,11 +62,11 @@ extension AddViewController {
             return
         }
         
-        let item = Item(name: name, description: description, cost: cost)
+        let product = Product(name: name, description: description, cost: cost)
         
-        addViewModel.item = item
-        addViewModel.saveItem(item)
-        delegate?.didAdd(new: addViewModel.item)
+        addProductViewModel.product = product
+        addProductViewModel.saveProduct(product)
+        delegate?.didAdd(new: addProductViewModel.product)
         
         navigationController?.popToRootViewController(animated: true)
     }

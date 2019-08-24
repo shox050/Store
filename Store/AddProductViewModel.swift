@@ -9,17 +9,16 @@
 import Foundation
 import CoreData
 
-class AddViewModel {
+class AddProductViewModel {
     
-    var item: Item!
+    var product: Product!
     
-    private let serializer: ItemSerialization & ItemDeserialization = ItemSerializer()
+    private let serializer: ProductSerialization & ProductDeserialization = ProductSerializer()
     
-    func saveItem(_ item: Item) {
+    func saveProduct(_ product: Product) {
         
         let managedContext = CoreDataStore.managedObjectContext
-        
-        let _ = serializer.serialize(item)
+        let _ = serializer.serialize(product)
         
         do {
             try managedContext?.save()

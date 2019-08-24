@@ -1,5 +1,5 @@
 //
-//  ItemEntity+CoreDataClass.swift
+//  ProductEntity+CoreDataClass.swift
 //  Store
 //
 //  Created by Vladimir on 21/08/2019.
@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(ItemEntity)
-public class ItemEntity: NSManagedObject {
+public class ProductEntity: NSManagedObject {
 
 }

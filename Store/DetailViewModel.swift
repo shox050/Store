@@ -10,38 +10,37 @@ import UIKit
 
 class DetailViewModel {
         
-    private var item: Item
+    private var product: Product
     
     var name: String {
-        return item.name
+        return product.name
     }
     
     var description: String {
-        return item.description
+        return product.description
     }
     
     var cost: Int {
-        return item.cost
+        return product.cost
     }
     
-    init(_ item: Item) {
-        self.item = item
+    init(_ product: Product) {
+        self.product = product
     }
     
     func renderPdf(_ completion: @escaping (Data) -> Void) {
         
         let pageRect = CGRect(x: 0, y: 0, width: 595, height: 841)
-
-        let renderer = UIGraphicsPDFRenderer(bounds: pageRect)
         
+        let renderer = UIGraphicsPDFRenderer(bounds: pageRect)
         
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = UIImage(named: "sparta")
         imageAttachment.bounds = CGRect(x: 0, y: 0, width: 200, height: 200)
         let imageString = NSAttributedString(attachment: imageAttachment)
         
-        let text = "\n\nName: \(item.name)\nDescription: \(item.description)\nCost: \(item.cost)"
-        let textAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)]
+        let text = "\n\nName: \(product.name)\nDescription: \(product.description)\nCost: \(product.cost)"
+        let textAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
         
         let formatedText = NSAttributedString(string: text, attributes: textAttributes)
         
@@ -55,28 +54,5 @@ class DetailViewModel {
         }
         
         completion(data)
-        
-//        let url = URL(fileURLWithPath: "/Users/vladimir/Documents/")
-//        let fileUrl = url.appendingPathComponent("myFile.pdf")
-        
-//        let path = Bundle.main.bundlePath
-        
-//        guard let fileUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-//            print("No path in render PDF")
-//            return
-//        }
-//
-////        let fileUrl = URL(fileURLWithPath: path).appendingPathComponent(constants.pdfFileName)
-//
-//        print(fileUrl)
-//
-//        do {
-//            try data.write(to: fileUrl)
-//            completion()
-//        } catch let error {
-//            print("Error save data: ", error.localizedDescription)
-//        }
     }
-    
-
 }

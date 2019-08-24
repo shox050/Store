@@ -12,20 +12,20 @@
 		E7F5B2E8230C549500EE5F62 /* Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2E6230C549500EE5F62 /* Store.xcdatamodeld */; };
 		E7F5B2ED230C549600EE5F62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F5B2EB230C549600EE5F62 /* LaunchScreen.storyboard */; };
 		E7F5B2FA230C5CDD00EE5F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F5B2F9230C5CDC00EE5F62 /* Assets.xcassets */; };
-		E7F5B2FE230C641200EE5F62 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2FD230C641200EE5F62 /* ListViewController.swift */; };
-		E7F5B300230C644500EE5F62 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2FF230C644500EE5F62 /* AddViewController.swift */; };
+		E7F5B2FE230C641200EE5F62 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2FD230C641200EE5F62 /* ProductListViewController.swift */; };
+		E7F5B300230C644500EE5F62 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2FF230C644500EE5F62 /* AddProductViewController.swift */; };
 		E7F5B302230C652200EE5F62 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B301230C652200EE5F62 /* ItemDetailViewController.swift */; };
-		E7F5B305230C6DB700EE5F62 /* Items.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7F5B304230C6DB700EE5F62 /* Items.plist */; };
-		E7F5B307230C701800EE5F62 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B306230C701800EE5F62 /* ListViewModel.swift */; };
-		E7F5B309230C702900EE5F62 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B308230C702900EE5F62 /* AddViewModel.swift */; };
+		E7F5B305230C6DB700EE5F62 /* Products.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7F5B304230C6DB700EE5F62 /* Products.plist */; };
+		E7F5B307230C701800EE5F62 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B306230C701800EE5F62 /* ProductListViewModel.swift */; };
+		E7F5B309230C702900EE5F62 /* AddProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B308230C702900EE5F62 /* AddProductViewModel.swift */; };
 		E7F5B30B230C703C00EE5F62 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B30A230C703C00EE5F62 /* DetailViewModel.swift */; };
-		E7F5B311230C789F00EE5F62 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B310230C789F00EE5F62 /* Item.swift */; };
-		E7F5B314230D9FA300EE5F62 /* ItemConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B313230D9FA300EE5F62 /* ItemConfiguration.swift */; };
+		E7F5B311230C789F00EE5F62 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B310230C789F00EE5F62 /* Product.swift */; };
+		E7F5B314230D9FA300EE5F62 /* ProductDetailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B313230D9FA300EE5F62 /* ProductDetailConfiguration.swift */; };
 		E7F5B326230DC9F600EE5F62 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B325230DC9F600EE5F62 /* CoreDataStore.swift */; };
-		E7F5B32D230DCD4C00EE5F62 /* ItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B32B230DCD4C00EE5F62 /* ItemEntity.swift */; };
-		E7F5B32E230DCD4C00EE5F62 /* ItemEntity+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B32C230DCD4C00EE5F62 /* ItemEntity+Properties.swift */; };
-		E7F5B334230DD04700EE5F62 /* ItemSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B333230DD04700EE5F62 /* ItemSerialization.swift */; };
-		E7F5B336230DD0E800EE5F62 /* ItemSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B335230DD0E800EE5F62 /* ItemSerializer.swift */; };
+		E7F5B32D230DCD4C00EE5F62 /* ProductEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B32B230DCD4C00EE5F62 /* ProductEntity.swift */; };
+		E7F5B32E230DCD4C00EE5F62 /* ProductEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B32C230DCD4C00EE5F62 /* ProductEntity+CoreDataProperties.swift */; };
+		E7F5B334230DD04700EE5F62 /* ProductSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B333230DD04700EE5F62 /* ProductSerialization.swift */; };
+		E7F5B336230DD0E800EE5F62 /* ProductSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B335230DD0E800EE5F62 /* ProductSerializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,20 +36,20 @@
 		E7F5B2EC230C549600EE5F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7F5B2EE230C549600EE5F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7F5B2F9230C5CDC00EE5F62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E7F5B2FD230C641200EE5F62 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		E7F5B2FF230C644500EE5F62 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		E7F5B2FD230C641200EE5F62 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		E7F5B2FF230C644500EE5F62 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 		E7F5B301230C652200EE5F62 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
-		E7F5B304230C6DB700EE5F62 /* Items.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Items.plist; sourceTree = "<group>"; };
-		E7F5B306230C701800EE5F62 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
-		E7F5B308230C702900EE5F62 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		E7F5B304230C6DB700EE5F62 /* Products.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Products.plist; sourceTree = "<group>"; };
+		E7F5B306230C701800EE5F62 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		E7F5B308230C702900EE5F62 /* AddProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewModel.swift; sourceTree = "<group>"; };
 		E7F5B30A230C703C00EE5F62 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
-		E7F5B310230C789F00EE5F62 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		E7F5B313230D9FA300EE5F62 /* ItemConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemConfiguration.swift; sourceTree = "<group>"; };
+		E7F5B310230C789F00EE5F62 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		E7F5B313230D9FA300EE5F62 /* ProductDetailConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailConfiguration.swift; sourceTree = "<group>"; };
 		E7F5B325230DC9F600EE5F62 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
-		E7F5B32B230DCD4C00EE5F62 /* ItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEntity.swift; sourceTree = "<group>"; };
-		E7F5B32C230DCD4C00EE5F62 /* ItemEntity+Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemEntity+Properties.swift"; sourceTree = "<group>"; };
-		E7F5B333230DD04700EE5F62 /* ItemSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSerialization.swift; sourceTree = "<group>"; };
-		E7F5B335230DD0E800EE5F62 /* ItemSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSerializer.swift; sourceTree = "<group>"; };
+		E7F5B32B230DCD4C00EE5F62 /* ProductEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEntity.swift; sourceTree = "<group>"; };
+		E7F5B32C230DCD4C00EE5F62 /* ProductEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E7F5B333230DD04700EE5F62 /* ProductSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSerialization.swift; sourceTree = "<group>"; };
+		E7F5B335230DD0E800EE5F62 /* ProductSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSerializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 				E7F5B303230C6CAB00EE5F62 /* ViewModels */,
 				E7F5B30F230C786D00EE5F62 /* Models */,
 				E7F5B2EE230C549600EE5F62 /* Info.plist */,
-				E7F5B304230C6DB700EE5F62 /* Items.plist */,
+				E7F5B304230C6DB700EE5F62 /* Products.plist */,
 				E7F5B2E6230C549500EE5F62 /* Store.xcdatamodeld */,
 				E7F5B2F9230C5CDC00EE5F62 /* Assets.xcassets */,
 			);
@@ -100,8 +100,8 @@
 		E7F5B2F4230C593E00EE5F62 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E7F5B2FD230C641200EE5F62 /* ListViewController.swift */,
-				E7F5B2FF230C644500EE5F62 /* AddViewController.swift */,
+				E7F5B2FD230C641200EE5F62 /* ProductListViewController.swift */,
+				E7F5B2FF230C644500EE5F62 /* AddProductViewController.swift */,
 				E7F5B301230C652200EE5F62 /* ItemDetailViewController.swift */,
 			);
 			name = Controllers;
@@ -127,8 +127,8 @@
 		E7F5B303230C6CAB00EE5F62 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				E7F5B306230C701800EE5F62 /* ListViewModel.swift */,
-				E7F5B308230C702900EE5F62 /* AddViewModel.swift */,
+				E7F5B306230C701800EE5F62 /* ProductListViewModel.swift */,
+				E7F5B308230C702900EE5F62 /* AddProductViewModel.swift */,
 				E7F5B30A230C703C00EE5F62 /* DetailViewModel.swift */,
 			);
 			name = ViewModels;
@@ -137,8 +137,8 @@
 		E7F5B30F230C786D00EE5F62 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E7F5B310230C789F00EE5F62 /* Item.swift */,
-				E7F5B313230D9FA300EE5F62 /* ItemConfiguration.swift */,
+				E7F5B310230C789F00EE5F62 /* Product.swift */,
+				E7F5B313230D9FA300EE5F62 /* ProductDetailConfiguration.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -146,8 +146,8 @@
 		E7F5B32F230DCD8300EE5F62 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				E7F5B32B230DCD4C00EE5F62 /* ItemEntity.swift */,
-				E7F5B32C230DCD4C00EE5F62 /* ItemEntity+Properties.swift */,
+				E7F5B32B230DCD4C00EE5F62 /* ProductEntity.swift */,
+				E7F5B32C230DCD4C00EE5F62 /* ProductEntity+CoreDataProperties.swift */,
 				E7F5B325230DC9F600EE5F62 /* CoreDataStore.swift */,
 			);
 			name = CoreData;
@@ -165,7 +165,7 @@
 		E7F5B331230DCDEC00EE5F62 /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				E7F5B335230DD0E800EE5F62 /* ItemSerializer.swift */,
+				E7F5B335230DD0E800EE5F62 /* ProductSerializer.swift */,
 			);
 			name = Implementation;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 		E7F5B332230DCDFA00EE5F62 /* Definitions */ = {
 			isa = PBXGroup;
 			children = (
-				E7F5B333230DD04700EE5F62 /* ItemSerialization.swift */,
+				E7F5B333230DD04700EE5F62 /* ProductSerialization.swift */,
 			);
 			name = Definitions;
 			sourceTree = "<group>";
@@ -239,7 +239,7 @@
 				E7F5B2ED230C549600EE5F62 /* LaunchScreen.storyboard in Resources */,
 				E7F5B2FA230C5CDD00EE5F62 /* Assets.xcassets in Resources */,
 				E7F5B2E5230C549500EE5F62 /* Main.storyboard in Resources */,
-				E7F5B305230C6DB700EE5F62 /* Items.plist in Resources */,
+				E7F5B305230C6DB700EE5F62 /* Products.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,20 +251,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7F5B326230DC9F600EE5F62 /* CoreDataStore.swift in Sources */,
-				E7F5B32E230DCD4C00EE5F62 /* ItemEntity+Properties.swift in Sources */,
-				E7F5B311230C789F00EE5F62 /* Item.swift in Sources */,
-				E7F5B300230C644500EE5F62 /* AddViewController.swift in Sources */,
+				E7F5B32E230DCD4C00EE5F62 /* ProductEntity+CoreDataProperties.swift in Sources */,
+				E7F5B311230C789F00EE5F62 /* Product.swift in Sources */,
+				E7F5B300230C644500EE5F62 /* AddProductViewController.swift in Sources */,
 				E7F5B2E8230C549500EE5F62 /* Store.xcdatamodeld in Sources */,
-				E7F5B309230C702900EE5F62 /* AddViewModel.swift in Sources */,
-				E7F5B307230C701800EE5F62 /* ListViewModel.swift in Sources */,
-				E7F5B32D230DCD4C00EE5F62 /* ItemEntity.swift in Sources */,
-				E7F5B336230DD0E800EE5F62 /* ItemSerializer.swift in Sources */,
+				E7F5B309230C702900EE5F62 /* AddProductViewModel.swift in Sources */,
+				E7F5B307230C701800EE5F62 /* ProductListViewModel.swift in Sources */,
+				E7F5B32D230DCD4C00EE5F62 /* ProductEntity.swift in Sources */,
+				E7F5B336230DD0E800EE5F62 /* ProductSerializer.swift in Sources */,
 				E7F5B30B230C703C00EE5F62 /* DetailViewModel.swift in Sources */,
-				E7F5B314230D9FA300EE5F62 /* ItemConfiguration.swift in Sources */,
+				E7F5B314230D9FA300EE5F62 /* ProductDetailConfiguration.swift in Sources */,
 				E7F5B2E0230C549500EE5F62 /* AppDelegate.swift in Sources */,
 				E7F5B302230C652200EE5F62 /* ItemDetailViewController.swift in Sources */,
-				E7F5B334230DD04700EE5F62 /* ItemSerialization.swift in Sources */,
-				E7F5B2FE230C641200EE5F62 /* ListViewController.swift in Sources */,
+				E7F5B334230DD04700EE5F62 /* ProductSerialization.swift in Sources */,
+				E7F5B2FE230C641200EE5F62 /* ProductListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

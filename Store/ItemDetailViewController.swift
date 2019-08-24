@@ -9,11 +9,11 @@
 import UIKit
 import MessageUI
 
-protocol ItemDetailController {
-    func configure(with configuration: DetailConfiguration)
+protocol ProductDetailController {
+    func configure(with configuration: ProductDetailConfiguration)
 }
 
-class DetailViewController: UIViewController {
+class ProductDetailViewController: UIViewController {
         
     private var detailViewModel: DetailViewModel!
     
@@ -23,7 +23,7 @@ class DetailViewController: UIViewController {
     
     @IBAction private func createPdf(_ sender: UIBarButtonItem) {
         detailViewModel.renderPdf { [weak self] attachment in
-            self? .sendMail(with: attachment)
+            self?.sendMail(with: attachment)
         }
     }
     
@@ -36,28 +36,27 @@ class DetailViewController: UIViewController {
     }
 }
 
-extension DetailViewController: ItemDetailController {
-    func configure(with configuration: DetailConfiguration) {
+extension ProductDetailViewController: ProductDetailController {
+    func configure(with configuration: ProductDetailConfiguration) {
         
-        detailViewModel = DetailViewModel(configuration.item)
+        detailViewModel = DetailViewModel(configuration.product)
     }
 }
 
 
-extension DetailViewController: MFMailComposeViewControllerDelegate {
+extension ProductDetailViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
     }
 }
 
-extension DetailViewController {
+extension ProductDetailViewController {
     func sendMail(with attachment: Data) {
         guard MFMailComposeViewController.canSendMail() else { return }
         
         let mail = MFMailComposeViewController()
         mail.mailComposeDelegate = self
         mail.setMessageBody("Hello world!", isHTML: false)
-        
         
         mail.addAttachmentData(attachment, mimeType: "application/pdf", fileName: "myFile.pdf")
         present(mail, animated: true)

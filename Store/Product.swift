@@ -1,5 +1,5 @@
 //
-//  Item.swift
+//  Product.swift
 //  Store
 //
 //  Created by Vladimir on 20/08/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Item: Decodable {
+struct Product: Decodable {
     let name: String
     let description: String
     let cost: Int

@@ -1,5 +1,5 @@
 //
-//  ItemConfiguration.swift
+//  ProductDetailConfiguration.swift
 //  Store
 //
 //  Created by Vladimir on 21/08/2019.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct DetailConfiguration {
-    var item: Item
+struct ProductDetailConfiguration {
+    var product: Product
 }

@@ -13,7 +13,7 @@
         <!--Add-->
         <scene sceneID="8KP-NY-nGu">
             <objects>
-                <viewController id="01j-D9-J0V" customClass="AddViewController" customModule="Store" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="01j-D9-J0V" customClass="AddProductViewController" customModule="Store" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MfJ-Jy-ntr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vam-4o-GkI">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Add new item" id="UwT-eA-Hgi"/>
+                                    <navigationItem title="Add new product" id="UwT-eA-Hgi"/>
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJj-77-APt">
@@ -48,7 +48,7 @@
                                     <constraint firstAttribute="width" constant="130" id="Mr5-gx-2nO"/>
                                     <constraint firstAttribute="height" constant="30" id="mf5-n9-L3b"/>
                                 </constraints>
-                                <state key="normal" title="Add new item"/>
+                                <state key="normal" title="Add new product"/>
                                 <connections>
                                     <action selector="actionAdd:" destination="01j-D9-J0V" eventType="touchUpInside" id="2y2-kR-V64"/>
                                 </connections>
@@ -89,7 +89,7 @@
         <!--List-->
         <scene sceneID="R41-Gy-ZKW">
             <objects>
-                <viewController id="Bh6-eT-RsI" customClass="ListViewController" customModule="Store" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bh6-eT-RsI" customClass="ProductListViewController" customModule="Store" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RsV-g5-B7y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +98,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="storeCell" textLabel="tKf-lk-39f" style="IBUITableViewCellStyleDefault" id="c0k-6s-Zlu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="storeCell" textLabel="tKf-lk-39f" style="IBUITableViewCellStyleDefault" id="c0k-6s-Zlu">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c0k-6s-Zlu" id="Qt9-wB-w3G">
@@ -139,8 +139,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tvList" destination="4yq-RK-Xi9" id="8oo-fD-6F9"/>
-                        <segue destination="5ah-ng-v1P" kind="show" identifier="showDetailViewController" id="ssl-xQ-sHf"/>
+                        <outlet property="tvProductList" destination="4yq-RK-Xi9" id="8oo-fD-6F9"/>
+                        <segue destination="5ah-ng-v1P" kind="show" identifier="showProductDetailViewController" id="ssl-xQ-sHf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="er7-SJ-vah" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -150,7 +150,7 @@
         <!--Detail-->
         <scene sceneID="NRk-uo-m8d">
             <objects>
-                <viewController title="Detail" id="5ah-ng-v1P" customClass="DetailViewController" customModule="Store" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail" id="5ah-ng-v1P" customClass="ProductDetailViewController" customModule="Store" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r7V-HH-qSn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

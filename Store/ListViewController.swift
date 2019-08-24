@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ListViewController: UIViewController {
+class ProductListViewController: UIViewController {
     
     @IBOutlet private weak var tvList: UITableView!
     
@@ -41,7 +41,7 @@ class ListViewController: UIViewController {
 
 
 // MARK: - UITableViewDataSource
-extension ListViewController: UITableViewDataSource {
+extension ProductListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listViewModel.items.count
@@ -61,7 +61,7 @@ extension ListViewController: UITableViewDataSource {
 
 
 // MARK: - UITableViewDelegate
-extension ListViewController: UITableViewDelegate {
+extension ProductListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
@@ -71,7 +71,7 @@ extension ListViewController: UITableViewDelegate {
     }
 }
 
-extension ListViewController: AddItemDelegate {
+extension ProductListViewController: AddItemDelegate {
     func didAdd(new item: Item) {
         listViewModel.items.append(item)
         
