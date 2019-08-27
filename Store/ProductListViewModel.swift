@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class ProductListViewModel {
+class ProductListViewModel: ProductListModel {
     
     var products: [Product] = []
     
@@ -19,7 +19,7 @@ class ProductListViewModel {
     private let executionQueue = DispatchQueue(label: Constants.DispatchQueueLabel.executionQueue, qos: .background, attributes: .concurrent)
 
     
-    func getProducts(_ completion: @escaping () -> Void) {
+    func loadProducts(_ completion: @escaping () -> Void) {
         executionQueue.async(group: productGroup) {
             self.getProductsFromPlist()
             self.getProductsFromCoreData()

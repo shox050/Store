@@ -10,6 +10,11 @@
 		E71C742E231154390064610D /* ProductEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C742C231154390064610D /* ProductEntity+CoreDataClass.swift */; };
 		E71C742F231154390064610D /* ProductEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C742D231154390064610D /* ProductEntity+CoreDataProperties.swift */; };
 		E7B065E92314E70E005952D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B065E82314E70E005952D7 /* Constants.swift */; };
+		E7B065ED231518EA005952D7 /* ProductListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B065EC231518EA005952D7 /* ProductListController.swift */; };
+		E7B065F123151A62005952D7 /* ProductListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B065F023151A62005952D7 /* ProductListModel.swift */; };
+		E7B065F323151D0C005952D7 /* ProductDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B065F223151D0C005952D7 /* ProductDetailController.swift */; };
+		E7B065F523151D74005952D7 /* AddProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B065F423151D74005952D7 /* AddProductModel.swift */; };
+		E7B065F72315223F005952D7 /* ProductDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B065F62315223F005952D7 /* ProductDetailModel.swift */; };
 		E7F5B2E0230C549500EE5F62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2DF230C549500EE5F62 /* AppDelegate.swift */; };
 		E7F5B2E5230C549500EE5F62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F5B2E3230C549500EE5F62 /* Main.storyboard */; };
 		E7F5B2E8230C549500EE5F62 /* Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B2E6230C549500EE5F62 /* Store.xcdatamodeld */; };
@@ -33,6 +38,11 @@
 		E71C742C231154390064610D /* ProductEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E71C742D231154390064610D /* ProductEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E7B065E82314E70E005952D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E7B065EC231518EA005952D7 /* ProductListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListController.swift; sourceTree = "<group>"; };
+		E7B065F023151A62005952D7 /* ProductListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListModel.swift; sourceTree = "<group>"; };
+		E7B065F223151D0C005952D7 /* ProductDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailController.swift; sourceTree = "<group>"; };
+		E7B065F423151D74005952D7 /* AddProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductModel.swift; sourceTree = "<group>"; };
+		E7B065F62315223F005952D7 /* ProductDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailModel.swift; sourceTree = "<group>"; };
 		E7F5B2DC230C549500EE5F62 /* Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Store.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F5B2DF230C549500EE5F62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7F5B2E4230C549500EE5F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,6 +83,45 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
+		E7B065EA231518A0005952D7 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				E7F5B2FD230C641200EE5F62 /* ProductListViewController.swift */,
+				E7F5B2FF230C644500EE5F62 /* AddProductViewController.swift */,
+				E7F5B301230C652200EE5F62 /* ProductDetailViewController.swift */,
+			);
+			name = Implementation;
+			sourceTree = "<group>";
+		};
+		E7B065EB231518AE005952D7 /* Definition */ = {
+			isa = PBXGroup;
+			children = (
+				E7B065EC231518EA005952D7 /* ProductListController.swift */,
+				E7B065F223151D0C005952D7 /* ProductDetailController.swift */,
+			);
+			name = Definition;
+			sourceTree = "<group>";
+		};
+		E7B065EE23151A2A005952D7 /* Definition */ = {
+			isa = PBXGroup;
+			children = (
+				E7B065F023151A62005952D7 /* ProductListModel.swift */,
+				E7B065F423151D74005952D7 /* AddProductModel.swift */,
+				E7B065F62315223F005952D7 /* ProductDetailModel.swift */,
+			);
+			name = Definition;
+			sourceTree = "<group>";
+		};
+		E7B065EF23151A36005952D7 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				E7F5B306230C701800EE5F62 /* ProductListViewModel.swift */,
+				E7F5B308230C702900EE5F62 /* AddProductViewModel.swift */,
+				E7F5B30A230C703C00EE5F62 /* ProductDetailViewModel.swift */,
+			);
+			name = Implementation;
+			sourceTree = "<group>";
+		};
 		E7F5B2D3230C549500EE5F62 = {
 			isa = PBXGroup;
 			children = (
@@ -92,13 +141,13 @@
 		E7F5B2DE230C549500EE5F62 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				E7B065E72314E6C3005952D7 /* Source */,
-				E7F5B330230DCDD700EE5F62 /* Serializers */,
 				E7F5B2F5230C595200EE5F62 /* Application */,
 				E7F5B2F6230C596900EE5F62 /* Storyboards */,
+				E7F5B330230DCDD700EE5F62 /* Serializers */,
 				E7F5B32F230DCD8300EE5F62 /* CoreData */,
 				E7F5B2F4230C593E00EE5F62 /* Controllers */,
 				E7F5B303230C6CAB00EE5F62 /* ViewModels */,
+				E7B065E72314E6C3005952D7 /* Source */,
 				E7F5B30F230C786D00EE5F62 /* Models */,
 				E7F5B2EE230C549600EE5F62 /* Info.plist */,
 				E7F5B304230C6DB700EE5F62 /* Products.plist */,
@@ -111,9 +160,8 @@
 		E7F5B2F4230C593E00EE5F62 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E7F5B2FD230C641200EE5F62 /* ProductListViewController.swift */,
-				E7F5B2FF230C644500EE5F62 /* AddProductViewController.swift */,
-				E7F5B301230C652200EE5F62 /* ProductDetailViewController.swift */,
+				E7B065EB231518AE005952D7 /* Definition */,
+				E7B065EA231518A0005952D7 /* Implementation */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -138,9 +186,8 @@
 		E7F5B303230C6CAB00EE5F62 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				E7F5B306230C701800EE5F62 /* ProductListViewModel.swift */,
-				E7F5B308230C702900EE5F62 /* AddProductViewModel.swift */,
-				E7F5B30A230C703C00EE5F62 /* ProductDetailViewModel.swift */,
+				E7B065EE23151A2A005952D7 /* Definition */,
+				E7B065EF23151A36005952D7 /* Implementation */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -269,11 +316,16 @@
 				E7F5B309230C702900EE5F62 /* AddProductViewModel.swift in Sources */,
 				E7F5B307230C701800EE5F62 /* ProductListViewModel.swift in Sources */,
 				E7B065E92314E70E005952D7 /* Constants.swift in Sources */,
+				E7B065ED231518EA005952D7 /* ProductListController.swift in Sources */,
+				E7B065F72315223F005952D7 /* ProductDetailModel.swift in Sources */,
+				E7B065F123151A62005952D7 /* ProductListModel.swift in Sources */,
 				E71C742E231154390064610D /* ProductEntity+CoreDataClass.swift in Sources */,
 				E7F5B336230DD0E800EE5F62 /* ProductSerializer.swift in Sources */,
 				E7F5B30B230C703C00EE5F62 /* ProductDetailViewModel.swift in Sources */,
 				E7F5B314230D9FA300EE5F62 /* ProductDetailConfiguration.swift in Sources */,
 				E7F5B2E0230C549500EE5F62 /* AppDelegate.swift in Sources */,
+				E7B065F523151D74005952D7 /* AddProductModel.swift in Sources */,
+				E7B065F323151D0C005952D7 /* ProductDetailController.swift in Sources */,
 				E7F5B302230C652200EE5F62 /* ProductDetailViewController.swift in Sources */,
 				E7F5B334230DD04700EE5F62 /* ProductSerialization.swift in Sources */,
 				E7F5B2FE230C641200EE5F62 /* ProductListViewController.swift in Sources */,

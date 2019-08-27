@@ -8,9 +8,8 @@
 
 import UIKit
 
-class DetailViewModel {
+class DetailViewModel: ProductDetailModel {
     
-    private let constants = Constants()
     private var product: Product
     
     var name: String {

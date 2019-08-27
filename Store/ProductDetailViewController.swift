@@ -9,13 +9,8 @@
 import UIKit
 import MessageUI
 
-protocol ProductDetailController {
-    func configure(with configuration: ProductDetailConfiguration)
-}
-
 class ProductDetailViewController: UIViewController {
     
-    private let constants = Constants()
     private var detailViewModel: DetailViewModel!
     
     @IBOutlet private weak var lName: UILabel!
@@ -38,7 +33,7 @@ class ProductDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         lName.text = detailViewModel.name
         lDescription.text = detailViewModel.description
         lCost.text = String(detailViewModel.cost)

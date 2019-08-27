@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class AddProductViewModel {
+class AddProductViewModel: AddProductModel {
     
     var product: Product!
     

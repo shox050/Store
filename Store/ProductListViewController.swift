@@ -11,7 +11,7 @@ import UIKit
 
 class ProductListViewController: UIViewController {
     
-    private let productListViewModel = ProductListViewModel()
+    private var productListViewModel: ProductListModel = ProductListViewModel()
     private var selectedProduct: Product?
     
     @IBOutlet private weak var tvProductList: UITableView!
@@ -19,7 +19,7 @@ class ProductListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        productListViewModel.getProducts { [weak self] in
+        productListViewModel.loadProducts { [weak self] in
             self?.tvProductList.reloadData()
         }
     }
@@ -33,6 +33,10 @@ class ProductListViewController: UIViewController {
     }
 }
 
+// MARK: - ProductListController
+extension ProductListViewModel: ProductListController {
+    
+}
 
 // MARK: - UITableViewDataSource
 extension ProductListViewController: UITableViewDataSource {
