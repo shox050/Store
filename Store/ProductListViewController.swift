@@ -67,12 +67,19 @@ extension ProductListViewController: UITableViewDelegate {
 
 extension ProductListViewController: AddProductDelegate {
     func didAdd(new product: Product) {
-        productListViewModel.products.append(product)
         
-        let indexPath = IndexPath(row: productListViewModel.products.count - 1, section: 0)
-        
-        tvProductList.beginUpdates()
-        tvProductList.insertRows(at: [indexPath], with: .automatic)
-        tvProductList.endUpdates()
+        DispatchQueue.global().asyncAfter(deadline: .now() + 5.0) { [weak self] in
+            guard let this = self else { return }
+            
+            this.productListViewModel.products.append(product)
+            
+            let indexPath = IndexPath(row: this.productListViewModel.products.count - 1, section: 0)
+            
+            DispatchQueue.main.sync {
+                this.tvProductList.beginUpdates()
+                this.tvProductList.insertRows(at: [indexPath], with: .automatic)
+                this.tvProductList.endUpdates()
+            }
+        }
     }
 }

@@ -18,7 +18,7 @@ extension ProductEntity {
     }
 
     @NSManaged public var cost: Int64
-    @NSManaged public var productDescription: String?
-    @NSManaged public var name: String?
+    @NSManaged public var productDescription: String
+    @NSManaged public var name: String
 
 }

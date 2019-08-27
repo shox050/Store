@@ -64,11 +64,12 @@ extension AddProductViewController {
         
         let product = Product(name: name, description: description, cost: cost)
         
-        addProductViewModel.product = product
         addProductViewModel.saveProduct(product)
-        delegate?.didAdd(new: addProductViewModel.product)
+        
+        addProductViewModel.product = product
         
         navigationController?.popToRootViewController(animated: true)
+        delegate?.didAdd(new: addProductViewModel.product)
     }
     
     private func showAlert(title: String, message: String) {
