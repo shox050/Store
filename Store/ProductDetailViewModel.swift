@@ -9,7 +9,8 @@
 import UIKit
 
 class DetailViewModel {
-        
+    
+    private let constants = Constants()
     private var product: Product
     
     var name: String {
@@ -30,17 +31,17 @@ class DetailViewModel {
     
     func renderPdf(_ completion: @escaping (Data) -> Void) {
         
-        let pageRect = CGRect(x: 0, y: 0, width: 595, height: 841)
+        let pageRect = Constants.RenderPDFSize.pageSize
         
         let renderer = UIGraphicsPDFRenderer(bounds: pageRect)
         
         let imageAttachment = NSTextAttachment()
-        imageAttachment.image = UIImage(named: "sparta")
-        imageAttachment.bounds = CGRect(x: 0, y: 0, width: 200, height: 200)
+        imageAttachment.image = UIImage(named: Constants.Identifier.labelShopName)
+        imageAttachment.bounds = Constants.RenderPDFSize.attachSize
         let imageString = NSAttributedString(attachment: imageAttachment)
         
         let text = "\n\nName: \(product.name)\nDescription: \(product.description)\nCost: \(product.cost)"
-        let textAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
+        let textAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)]
         
         let formatedText = NSAttributedString(string: text, attributes: textAttributes)
         
@@ -50,7 +51,7 @@ class DetailViewModel {
         let data = renderer.pdfData { ctx in
             ctx.beginPage()
             
-            formattedTitle.draw(in: pageRect.insetBy(dx: 50, dy: 50))
+            formattedTitle.draw(in: pageRect.insetBy(dx: Constants.RenderPDFSize.offsetForDrawPage, dy: Constants.RenderPDFSize.offsetForDrawPage))
         }
         
         completion(data)

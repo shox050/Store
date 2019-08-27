@@ -11,10 +11,10 @@ import UIKit
 
 class ProductListViewController: UIViewController {
     
-    @IBOutlet private weak var tvProductList: UITableView!
-    
     private let productListViewModel = ProductListViewModel()
     private var selectedProduct: Product?
+    
+    @IBOutlet private weak var tvProductList: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,13 +42,10 @@ extension ProductListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "storeCell") else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifier.cellIdentifier) else {
             return UITableViewCell()
         }
-
         cell.textLabel?.text = productListViewModel.products[indexPath.row].name
-
         return cell
     }
 }
@@ -56,23 +53,21 @@ extension ProductListViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension ProductListViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
         selectedProduct = productListViewModel.products[indexPath.row]
-        
-        performSegue(withIdentifier: "showProductDetailViewController", sender: self)
+        performSegue(withIdentifier: Constants.Identifier.segueIdentifierDetailVC, sender: self)
     }
 }
 
+// MARK: - AddProductDelegate
 extension ProductListViewController: AddProductDelegate {
+    
     func didAdd(new product: Product) {
-        
         DispatchQueue.global().asyncAfter(deadline: .now() + 5.0) { [weak self] in
             guard let this = self else { return }
-            
             this.productListViewModel.products.append(product)
-            
             let indexPath = IndexPath(row: this.productListViewModel.products.count - 1, section: 0)
             
             DispatchQueue.main.sync {

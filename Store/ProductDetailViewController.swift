@@ -14,7 +14,8 @@ protocol ProductDetailController {
 }
 
 class ProductDetailViewController: UIViewController {
-        
+    
+    private let constants = Constants()
     private var detailViewModel: DetailViewModel!
     
     @IBOutlet private weak var lName: UILabel!
@@ -26,6 +27,14 @@ class ProductDetailViewController: UIViewController {
             self?.sendMail(with: attachment)
         }
     }
+    @IBAction private func actionBuy(_ sender: UIButton) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 3.0) { [weak self] in
+            DispatchQueue.main.sync {
+                self?.navigationController?.popToRootViewController(animated: true)
+            }
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +67,7 @@ extension ProductDetailViewController {
         mail.mailComposeDelegate = self
         mail.setMessageBody("Hello world!", isHTML: false)
         
-        mail.addAttachmentData(attachment, mimeType: "application/pdf", fileName: "myFile.pdf")
+        mail.addAttachmentData(attachment, mimeType: Constants.MimeType.pdf, fileName: Constants.Identifier.attachmentName)
         present(mail, animated: true)
     }
 }

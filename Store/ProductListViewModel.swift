@@ -16,7 +16,7 @@ class ProductListViewModel {
     private let serializer: ProductSerialization & ProductDeserialization = ProductSerializer()
     
     private let productGroup = DispatchGroup()
-    private let executionQueue = DispatchQueue(label: "ProductQueue", qos: .background, attributes: .concurrent)
+    private let executionQueue = DispatchQueue(label: Constants.DispatchQueueLabel.executionQueue, qos: .background, attributes: .concurrent)
 
     
     func getProducts(_ completion: @escaping () -> Void) {
@@ -31,8 +31,8 @@ class ProductListViewModel {
     }
     
     private func getProductsFromPlist() {
-        guard let path = Bundle.main.path(forResource: "Products", ofType: "plist") else {
-            print("No path for Products.plist")
+        guard let path = Bundle.main.path(forResource: Constants.Identifier.sourceFile, ofType: Constants.Identifier.typeSourceFile) else {
+            print("No path for \(Constants.Identifier.sourceFile).\(Constants.Identifier.typeSourceFile)")
             return
         }
         
@@ -46,13 +46,13 @@ class ProductListViewModel {
                 self.products += products
             }
         } catch let error {
-            print("func getProductsFromPlist catch error: \(error.localizedDescription)")
+            print("func getProductsFromPlist catch error: \(error)")
         }
     }
     
     private func getProductsFromCoreData() {
         let managedContext = CoreDataStore.managedObjectContext
-        let fetchRequest = NSFetchRequest<ProductEntity>(entityName: "ProductEntity")
+        let fetchRequest = NSFetchRequest<ProductEntity>(entityName: Constants.Identifier.entityName)
         
         do {
             if let productsEntity = try managedContext?.fetch(fetchRequest) {
